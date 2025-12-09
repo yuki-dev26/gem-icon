@@ -115,10 +115,8 @@ function deleteGemIcon(gemId) {
   chrome.storage.local.get(["gemIcons", "gemDisplayNames"], (result) => {
     const gemIcons = result.gemIcons || {};
     const gemDisplayNames = result.gemDisplayNames || {};
-    const displayName =
-      gemDisplayNames[gemId] || `Gem ${gemId.substring(0, 8)}...`;
 
-    if (!confirm(`"${displayName}" の設定を削除しますか?`)) return;
+    if (!confirm(`アイコンの設定を削除しますか?`)) return;
 
     delete gemIcons[gemId];
     delete gemDisplayNames[gemId];
@@ -131,7 +129,7 @@ function deleteGemIcon(gemId) {
         fileInput.value = "";
         saveBtn.disabled = true;
       }
-      alert(`"${displayName}" の設定を削除しました`);
+      alert(`アイコンの設定を削除しました`);
 
       const [tab] = await chrome.tabs.query({
         active: true,
@@ -226,7 +224,7 @@ function saveToStorage(imageData) {
     gemDisplayNames[currentGemId] = currentGemDisplayName;
 
     chrome.storage.local.set({ gemIcons, gemDisplayNames }, async () => {
-      alert(`"${currentGemDisplayName}" のアイコンを保存しました！`);
+      alert(`アイコンを保存しました！`);
       displayGemList();
 
       const [tab] = await chrome.tabs.query({
