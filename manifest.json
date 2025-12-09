@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Gemアイコン設定",
+    "version": "1.0",
+    "description": "GeminiアプリのGemアイコンを好きな画像に設定する拡張機能",
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+    "icons": {
+        "16": "app_icon.png",
+        "48": "app_icon.png",
+        "128": "app_icon.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "app_icon.png",
+            "48": "app_icon.png",
+            "128": "app_icon.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://gemini.google.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
