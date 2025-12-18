@@ -229,3 +229,47 @@ function saveToStorage(imageData) {
 
 getCurrentGemInfo();
 displayGemList();
+
+const downloadLogBtn = document.getElementById("downloadLogBtn");
+
+downloadLogBtn.addEventListener("click", async () => {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  if (!tab || !tab.id) {
+    alert("タブが見つかりません");
+    return;
+  }
+
+  try {
+    const response = await chrome.tabs.sendMessage(tab.id, {
+      action: "download_logs",
+    });
+
+    if (response && response.jsonl) {
+      const blob = new Blob([response.jsonl], {
+        type: "application/x-jsonlines",
+      });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+
+      const now = new Date();
+      const timestamp = now.toISOString().replace(/[:.]/g, "-").slice(0, 19);
+      a.download = `gemini_chat_log_${timestamp}.jsonl`;
+
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } else {
+      console.error("ログデータの取得に失敗しました", response);
+      alert(
+        "ログが見つかりませんでした。ページが正しく読み込まれているか確認してください。"
+      );
+    }
+  } catch (error) {
+    console.error("通信エラー:", error);
+    alert(
+      "コンテンツスクリプトとの通信に失敗しました。ページをリロードして再試行してください。"
+    );
+  }
+});

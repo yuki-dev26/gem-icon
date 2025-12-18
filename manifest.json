@@ -30,7 +30,8 @@
                 "https://gemini.google.com/*"
             ],
             "js": [
-                "content.js"
+                "icon_replacer.js",
+                "log_extractor.js"
             ],
             "run_at": "document_idle"
         }

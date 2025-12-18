@@ -20,7 +20,7 @@ function getGemDisplayName() {
   }
 
   const gemId = getGemId();
-  return gemId ? `Gem ${gemId.substring(0, 8)}...` : null;
+  return gemId ? `GemId ${gemId.substring(0, 8)}...` : null;
 }
 
 function replaceGeminiIcon() {
