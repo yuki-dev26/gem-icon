@@ -61,6 +61,12 @@ function replaceGeminiIcon() {
 
       div.appendChild(img);
     });
+
+    // カスタムGemラベルを非表示にする
+    const labels = document.querySelectorAll(".bot-name-ugc-label");
+    labels.forEach((label) => {
+      label.style.display = "none";
+    });
   });
 }
 
