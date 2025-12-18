@@ -55,7 +55,7 @@ function replaceGeminiIcon() {
       img.classList.add("custom-gemini-icon");
       img.style.width = "100%";
       img.style.height = "100%";
-      img.style.borderRadius = "50%";
+      img.style.borderRadius = "8px";
       img.style.objectFit = "cover";
       img.style.display = "block";
 
