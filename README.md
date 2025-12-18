@@ -1,6 +1,6 @@
-# Gem Icon Changer
+# Gem Partner
 
-Gemini アプリの Gem アイコンを好きな画像に設定できる拡張機能です。
+Gemini アプリの Gem アイコン設定や会話ログの保存ができるパートナー向け拡張機能です。
 
 **使い方や開発の経緯については、[こちらの記事](https://note.com/yuki_tech/n/n560208ff9dea)も併せてご覧ください。**
 
@@ -17,7 +17,7 @@ Gemini アプリの Gem アイコンを好きな画像に設定できる拡張�
 1. このリポジトリをクローンまたは note 記事からダウンロード
 
 ```bash
-git clone https://github.com/yuki-dev26/gem-icon.git
+git clone https://github.com/yuki-dev26/gem-partner.git
 ```
 
 2. Chrome で `chrome://extensions/` を開く
@@ -59,7 +59,7 @@ git clone https://github.com/yuki-dev26/gem-icon.git
 ## ファイル構成
 
 ```
-gem-icon/
+gem-partner/
 ├── manifest.json      # 拡張機能の設定ファイル
 ├── popup.html         # ポップアップのHTML
 ├── popup.js           # ポップアップの動作

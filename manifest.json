@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Gem Icon Changer",
-    "version": "1.0",
-    "description": "GeminiアプリのGemアイコンを好きな画像に設定できる拡張機能",
+    "name": "Gem Partner",
+    "version": "1.1",
+    "description": "GeminiアプリのGemアイコン設定や会話ログの保存ができるパートナー拡張機能",
     "permissions": [
         "storage",
         "tabs",
