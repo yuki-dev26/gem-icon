@@ -2,7 +2,16 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "download_logs") {
     try {
       const logs = extractChatLogs();
-      const jsonl = logs.map((log) => JSON.stringify(log)).join("\n");
+      const jsonl = logs
+        .map(
+          (log) =>
+            `{"timestamp": ${JSON.stringify(
+              log.timestamp
+            )}, "input": ${JSON.stringify(
+              log.input
+            )}, "response": ${JSON.stringify(log.response)}}`
+        )
+        .join("\n");
       sendResponse({ jsonl: jsonl });
     } catch (e) {
       console.error("Extraction error:", e);
@@ -56,7 +65,7 @@ function extractChatLogs() {
           logs.push(currentEntry);
         }
         currentEntry = {
-          time: null,
+          timestamp: null,
           input: content,
           response: null,
         };
@@ -67,7 +76,7 @@ function extractChatLogs() {
           currentEntry = null;
         } else {
           logs.push({
-            time: null,
+            timestamp: null,
             input: null,
             response: content,
           });
