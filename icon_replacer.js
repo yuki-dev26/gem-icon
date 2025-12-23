@@ -1,5 +1,7 @@
 function getGemId() {
-  const match = window.location.pathname.match(/\/gem\/([^\/\?#]+)/);
+  const match =
+    window.location.pathname.match(/\/gem\/([^\/\?#]+)/) ||
+    window.location.pathname.match(/\/gems\/edit\/([^\/\?#]+)/);
   return match ? match[1] : null;
 }
 
