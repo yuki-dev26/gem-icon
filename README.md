@@ -80,6 +80,10 @@ gem-partner/
 - **削除**: 拡張機能を削除または無効にすると全ての設定がリセットされます
 - **非公式**: 非公式の拡張機能です。自己責任でお使いください
 
+## Supporters
+
+[![note メンバーシップ](https://img.shields.io/badge/note-Membership-41C9B4?style=for-the-badge&logo=note&logoColor=white)](https://note.com/yuki_tech/membership/members)
+
 ## License
 
 Copyright (c) 2025 [yuki-P](https://x.com/yuki_p02)
