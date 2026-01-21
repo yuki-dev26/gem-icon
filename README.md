@@ -17,9 +17,9 @@ Gemini アプリの Gem アイコン設定や会話ログの保存ができる�
 
 1. このリポジトリをクローンまたは note 記事からダウンロード
 
-```bash
-git clone https://github.com/yuki-dev26/gem-partner.git
-```
+   ```bash
+   git clone https://github.com/yuki-dev26/gem-partner.git
+   ```
 
 2. Chrome で `chrome://extensions/` を開く
 
@@ -59,7 +59,7 @@ git clone https://github.com/yuki-dev26/gem-partner.git
 
 ## ファイル構成
 
-```
+```text
 gem-partner/
 ├── manifest.json      # 拡張機能の設定ファイル
 ├── popup.html         # ポップアップのHTML
