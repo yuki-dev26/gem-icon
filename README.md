@@ -2,12 +2,14 @@
 
 GeminiアプリのGemアイコン設定や会話ログの保存ができるパートナー向け拡張機能です。
 
+<img width="1280" height="670" alt="image" src="https://github.com/user-attachments/assets/f12fc0eb-4159-4427-8296-46edc3836b8b" />
+
 > [!TIP]
 > 使い方や開発の経緯については、[こちらの記事](https://note.com/yuki_tech/n/n560208ff9dea)も併せてご覧ください。
 
 ## 機能
 
-- Gemini アプリの会話画面に表示されるGemアイコンをカスタマイズ
+- Geminiアプリの会話画面に表示されるGemアイコンをカスタマイズ
 - お気に入りの画像を簡単にアップロード
 - Gemごとに好きなアイコンを設定可能
 - 画像は拡張機能内に保存され、ページをリロードしても維持
